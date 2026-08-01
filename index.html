@@ -11,10 +11,8 @@
 <body class="min-h-screen flex flex-col items-center py-12 px-4 sm:px-6 relative">
 
     <header class="w-full max-w-2xl text-center mb-10 z-10">
-        <div class="brand-logo"><span class="brand-dot">•</span> FR.</div>
-        
-        <div class="w-28 h-28 mx-auto rounded-full border-2 border-[#00F0FF] mb-4 overflow-hidden shadow-[0_0_20px_rgba(0,240,255,0.35)] bg-[#0A0A0A]">
-            <img src="hi.jpeg" alt="Muhammad Faizan Rana" class="w-full h-full object-cover" onerror="this.src='https://avatars.githubusercontent.com/contactfaizanrana'">
+        <div class="brand-logo-container" data-tilt data-tilt-scale="1.05">
+           <div class="brand-logo-text"><span class="brand-dot">•</span>FR</div>
         </div>
         
         <h1 class="text-3xl font-black tracking-tight mb-1">Muhammad Faizan Rana</h1>
@@ -22,7 +20,7 @@
         <p class="text-xs text-gray-400 mb-4 tracking-wide">Aspiring Computer Science & Cybersecurity Major</p>
         
         <p class="text-sm text-gray-300 leading-relaxed max-w-lg mx-auto italic px-4">
-            "The barrier to entry for building a global business has officially hit zero. I don’t just market brands—I build the tech stacks behind them."
+            "The barrier to entry for building a global business has hit zero. I don’t just market brands—I build the tech stacks behind them."
         </p>
     </header>
 
@@ -133,11 +131,11 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
     <script>
-        VanillaTilt.init(document.querySelectorAll(".glass-panel, .cert-badge"), {
-            max: 6,
+        VanillaTilt.init(document.querySelectorAll(".glass-panel, .cert-badge, .brand-logo-container"), {
+            max: 8,
             speed: 400,
             glare: true,
-            "max-glare": 0.12,
+            "max-glare": 0.2,
         });
     </script>
 </body>
