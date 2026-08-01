@@ -6,113 +6,101 @@
     <title>Faizan Rana | Digital Infrastructure</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
-        body {
-            background-color: #0A0A0A;
-            color: #FFFFFF;
-            font-family: 'Inter', sans-serif;
-            background-image: radial-gradient(circle at 50% 0%, #1a1a24 0%, #0A0A0A 70%);
-        }
-        .glass-panel {
-            background: rgba(20, 20, 20, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid #333;
-            transition: all 0.3s ease;
-        }
-        .glass-panel:hover {
-            border-color: #00F0FF;
-            box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
-            transform: translateY(-2px);
-        }
-        .cert-badge {
-            background: #111;
-            border: 1px solid #222;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="min-h-screen flex flex-col items-center py-12 px-4 sm:px-6">
+<body class="min-h-screen flex flex-col items-center py-12 px-4 sm:px-6 relative">
 
-    <header class="w-full max-w-2xl text-center mb-10">
-        <div class="w-24 h-24 mx-auto rounded-full border-2 border-[#00F0FF] mb-4 overflow-hidden">
+    <header class="w-full max-w-2xl text-center mb-10 z-10">
+        <div class="brand-logo"><span class="brand-dot">•</span> FR.</div>
+        
+        <div class="w-24 h-24 mx-auto rounded-full border-2 border-[#00F0FF] mb-4 overflow-hidden shadow-[0_0_15px_rgba(0,240,255,0.3)]">
             <img src="https://avatars.githubusercontent.com/contactfaizanrana" alt="Faizan Rana" class="w-full h-full object-cover">
         </div>
         <h1 class="text-3xl font-black tracking-tight mb-1">Muhammad Faizan Rana</h1>
-        <h2 class="text-sm text-gray-400 uppercase tracking-widest mb-4">SaaS Builder & Digital Marketer</h2>
-        <p class="text-sm text-gray-300 leading-relaxed max-w-md mx-auto">
-            "The barrier to entry for building a global business has officially hit zero. I don’t just market brands—I build the tech stacks behind them."
+        <h2 class="text-xs text-[#00F0FF] uppercase tracking-widest mb-4 font-bold">Digital Infrastructure & Performance</h2>
+        <p class="text-sm text-gray-400 leading-relaxed max-w-md mx-auto italic">
+            "The barrier to entry for building a global business has hit zero. I don’t just market brands—I build the tech stacks behind them."
         </p>
     </header>
 
-    <main class="w-full max-w-md space-y-4 mb-12">
-        <a href="https://wa.me/923317868071" class="glass-panel flex items-center justify-between p-4 rounded-lg text-white font-bold group">
-            <div class="flex items-center gap-3">
-                <i class="fa-brands fa-whatsapp text-[#00FF66] text-xl"></i>
-                <span>Inquiries & Architecture Builds</span>
+    <main class="w-full max-w-md space-y-4 mb-16 z-10">
+        
+        <a href="https://cal.com/contact.faizanrana/discovery-call" target="_blank" data-tilt data-tilt-glare data-tilt-max-glare="0.3" class="glass-panel primary-cta flex items-center justify-between p-5 rounded-xl text-white font-bold group cursor-pointer relative overflow-hidden">
+            <div class="flex items-center gap-4">
+                <i class="fa-solid fa-calendar-check text-[#00F0FF] text-2xl drop-shadow-md"></i>
+                <div class="flex flex-col">
+                    <span class="text-lg tracking-wide">Initialize Architecture Call</span>
+                    <span class="text-xs text-gray-300 font-normal">Book a 1-on-1 Discovery Session</span>
+                </div>
             </div>
-            <i class="fa-solid fa-arrow-right text-gray-500 group-hover:text-[#00F0FF]"></i>
+            <i class="fa-solid fa-arrow-right text-[#00F0FF] group-hover:translate-x-1 transition-transform"></i>
         </a>
 
-        <a href="https://www.linkedin.com/in/ranafaizanasap/" target="_blank" class="glass-panel flex items-center justify-between p-4 rounded-lg text-white font-bold group">
+        <a href="https://wa.me/923317868071" target="_blank" data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="glass-panel flex items-center justify-between p-4 rounded-xl text-white font-bold group cursor-pointer">
+            <div class="flex items-center gap-3">
+                <i class="fa-brands fa-whatsapp text-[#00FF66] text-xl"></i>
+                <span>Direct Inquiry / WhatsApp</span>
+            </div>
+            <i class="fa-solid fa-arrow-right text-gray-500 group-hover:text-[#00F0FF] group-hover:translate-x-1 transition-transform"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/ranafaizanasap/" target="_blank" data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="glass-panel flex items-center justify-between p-4 rounded-xl text-white font-bold group cursor-pointer">
             <div class="flex items-center gap-3">
                 <i class="fa-brands fa-linkedin text-[#0077b5] text-xl"></i>
                 <span>Professional Authority</span>
             </div>
-            <i class="fa-solid fa-arrow-right text-gray-500 group-hover:text-[#00F0FF]"></i>
+            <i class="fa-solid fa-arrow-right text-gray-500 group-hover:text-[#00F0FF] group-hover:translate-x-1 transition-transform"></i>
         </a>
 
-        <a href="https://github.com/contactfaizanrana" target="_blank" class="glass-panel flex items-center justify-between p-4 rounded-lg text-white font-bold group">
+        <a href="https://github.com/contactfaizanrana" target="_blank" data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="glass-panel flex items-center justify-between p-4 rounded-xl text-white font-bold group cursor-pointer">
             <div class="flex items-center gap-3">
                 <i class="fa-brands fa-github text-white text-xl"></i>
                 <span>The Codebase</span>
             </div>
-            <i class="fa-solid fa-arrow-right text-gray-500 group-hover:text-[#00F0FF]"></i>
+            <i class="fa-solid fa-arrow-right text-gray-500 group-hover:text-[#00F0FF] group-hover:translate-x-1 transition-transform"></i>
         </a>
 
-        <a href="https://instagram.com/thefaizanrana" target="_blank" class="glass-panel flex items-center justify-between p-4 rounded-lg text-white font-bold group">
+        <a href="https://instagram.com/thefaizanrana" target="_blank" data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="glass-panel flex items-center justify-between p-4 rounded-xl text-white font-bold group cursor-pointer">
             <div class="flex items-center gap-3">
                 <i class="fa-brands fa-instagram text-[#E1306C] text-xl"></i>
                 <span>Brand Presence</span>
             </div>
-            <i class="fa-solid fa-arrow-right text-gray-500 group-hover:text-[#00F0FF]"></i>
+            <i class="fa-solid fa-arrow-right text-gray-500 group-hover:text-[#00F0FF] group-hover:translate-x-1 transition-transform"></i>
         </a>
     </main>
 
-    <section class="w-full max-w-2xl">
+    <section class="w-full max-w-2xl mb-12 z-10">
         <h3 class="text-xs text-gray-500 uppercase tracking-widest text-center mb-6 border-b border-gray-800 pb-2">Verified HackerRank Credentials</h3>
-        
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="cert-badge p-4 rounded text-left">
-                <h4 class="font-bold text-[#00F0FF] text-sm">Frontend Developer (React)</h4>
-                <p class="text-xs text-gray-400 mt-1">Component architecture, state management, REST API integration.</p>
+            <div data-tilt data-tilt-scale="1.02" class="cert-badge p-5 rounded-lg text-left cursor-default transform-style-3d">
+                <h4 class="font-bold text-[#00F0FF] text-sm transform translate-z-10">Frontend Developer (React)</h4>
+                <p class="text-xs text-gray-400 mt-2">Component architecture, state management, REST API integration.</p>
             </div>
-            <div class="cert-badge p-4 rounded text-left">
-                <h4 class="font-bold text-[#00F0FF] text-sm">Node.js (Intermediate)</h4>
-                <p class="text-xs text-gray-400 mt-1">Scalable RESTful APIs, custom middleware, async flow control.</p>
+            <div data-tilt data-tilt-scale="1.02" class="cert-badge p-5 rounded-lg text-left cursor-default transform-style-3d">
+                <h4 class="font-bold text-[#00F0FF] text-sm transform translate-z-10">Node.js (Intermediate)</h4>
+                <p class="text-xs text-gray-400 mt-2">Scalable RESTful APIs, custom middleware, async flow control.</p>
             </div>
-            <div class="cert-badge p-4 rounded text-left">
-                <h4 class="font-bold text-white text-sm">Java (Intermediate)</h4>
-                <p class="text-xs text-gray-400 mt-1">OOP principles, Multithreading, Streams API & Lambdas.</p>
-            </div>
-            <div class="cert-badge p-4 rounded text-left">
-                <h4 class="font-bold text-white text-sm">REST API (Intermediate)</h4>
-                <p class="text-xs text-gray-400 mt-1">Consuming APIs, paginated GET requests, JSON payload parsing.</p>
-            </div>
-            <div class="cert-badge p-4 rounded text-left sm:col-span-2">
-                <h4 class="font-bold text-[#00FF66] text-sm">SQL Data Architecture</h4>
-                <p class="text-xs text-gray-400 mt-1">
-                    <span class="text-white">Advanced:</span> Window Functions, CTEs | 
-                    <span class="text-white">Intermediate:</span> Complex JOINs, Subqueries | 
-                    <span class="text-white">Basic:</span> Relational logic.
-                </p>
+            <div data-tilt data-tilt-scale="1.02" class="cert-badge p-5 rounded-lg text-left cursor-default transform-style-3d sm:col-span-2">
+                <h4 class="font-bold text-[#00FF66] text-sm transform translate-z-10">SQL Data Architecture</h4>
+                <p class="text-xs text-gray-400 mt-2">Advanced: Window Functions, CTEs | Intermediate: Complex JOINs | Basic: Relational logic.</p>
             </div>
         </div>
     </section>
 
-    <footer class="mt-16 text-center text-xs text-gray-600">
-        <p>16yo. LHR ➔ Worldwide.</p>
-        <p class="mt-1">• FR. Digital Infrastructure</p>
+    <footer class="mt-8 text-center text-xs text-gray-600 z-10">
+        <p class="tracking-widest uppercase">16yo. LHR ➔ Worldwide.</p>
+        <p class="mt-2 font-bold text-gray-500">SYSTEM ONLINE</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script>
+        // Initialize 3D effects on all glass panels
+        VanillaTilt.init(document.querySelectorAll(".glass-panel"), {
+            max: 8,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.15,
+        });
+    </script>
 </body>
 </html>
