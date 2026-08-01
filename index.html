@@ -10,7 +10,12 @@
 </head>
 <body class="min-h-screen flex flex-col items-center py-12 px-4 sm:px-6 relative">
 
-    <header class="w-full max-w-2xl text-center mb-10 z-10">
+    <div class="w-full max-w-md mb-6 flex justify-between items-center text-[10px] mono-font text-gray-400 px-2 z-10">
+        <span>[NODE: LHR-01]</span>
+        <span class="text-[#00FF66] flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-[#00FF66] animate-ping"></span> SECURE TELEMETRY ACTIVE</span>
+    </div>
+
+    <header class="w-full max-w-2xl text-center mb-8 z-10">
         <div class="brand-logo-container" data-tilt data-tilt-scale="1.05">
            <div class="brand-logo-text"><span class="brand-dot">•</span>FR</div>
         </div>
@@ -23,7 +28,18 @@
         </p>
     </header>
 
-    <main class="w-full max-w-md space-y-4 mb-16 z-10">
+    <div class="w-full max-w-md flex flex-wrap justify-center gap-2 mb-8 z-10">
+        <span class="tech-pill">Next.js</span>
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">Node.js</span>
+        <span class="tech-pill">React</span>
+        <span class="tech-pill">SQL (Advanced)</span>
+        <span class="tech-pill">Tailwind</span>
+        <span class="tech-pill">Linux</span>
+        <span class="tech-pill">Docker</span>
+    </div>
+
+    <main class="w-full max-w-md space-y-4 mb-12 z-10">
         
         <a href="https://cal.com/contact.faizanrana/discovery-call" target="_blank" data-tilt data-tilt-glare data-tilt-max-glare="0.3" class="glass-panel primary-cta flex items-center justify-between p-5 rounded-xl text-white font-bold group cursor-pointer relative overflow-hidden">
             <div class="flex items-center gap-4">
@@ -68,6 +84,22 @@
             <i class="fa-solid fa-arrow-right text-gray-500 group-hover:text-[#00F0FF] group-hover:translate-x-1 transition-transform"></i>
         </a>
     </main>
+
+    <section class="w-full max-w-md mb-12 z-10 px-2">
+        <div class="terminal-box">
+            <div class="terminal-header flex justify-between items-center text-[10px] text-gray-400 mono-font">
+                <span>faizan@infrastructure:~</span>
+                <span class="text-[#00F0FF]">bash</span>
+            </div>
+            <div id="terminalBody" class="terminal-body space-y-1">
+                <div>System initialized. Type <span class="text-[#00F0FF]">"help"</span> for available commands.</div>
+            </div>
+            <div class="p-2 border-t border-[rgba(0,240,255,0.15)] flex items-center gap-2 bg-[#040406]">
+                <span class="text-[#00F0FF] text-xs">root@fr:~$</span>
+                <input type="text" id="terminalInput" class="terminal-input" placeholder="type command..." autofocus>
+            </div>
+        </div>
+    </section>
 
     <section class="w-full max-w-2xl mb-12 z-10 px-2">
         <h3 class="text-xs text-gray-400 uppercase tracking-widest text-center mb-6 border-b border-gray-800 pb-2 mono-font">Verified HackerRank Credentials (Issued Jul 2026)</h3>
@@ -138,11 +170,49 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
     <script>
-        VanillaTilt.init(document.querySelectorAll(".glass-panel, .cert-badge, .brand-logo-container, .coming-soon-badge"), {
-            max: 6,
+        VanillaTilt.init(document.querySelectorAll(".glass-panel, .cert-badge, .brand-logo-container, .coming-soon-badge, .terminal-box"), {
+            max: 5,
             speed: 400,
             glare: true,
-            "max-glare": 0.15,
+            "max-glare": 0.12,
+        });
+
+        // Interactive Terminal Script
+        const terminalInput = document.getElementById('terminalInput');
+        const terminalBody = document.getElementById('terminalBody');
+
+        terminalInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                const cmd = terminalInput.value.trim().toLowerCase();
+                const commandLine = document.createElement('div');
+                commandLine.innerHTML = `<span class="text-[#00F0FF]">root@fr:~$</span> ${terminalInput.value}`;
+                terminalBody.appendChild(commandLine);
+
+                const responseLine = document.createElement('div');
+                responseLine.className = "text-gray-300";
+
+                if (cmd === 'help') {
+                    responseLine.innerHTML = "Available commands: <span class='text-[#00F0FF]'>skills</span>, <span class='text-[#00F0FF]'>status</span>, <span class='text-[#00F0FF]'>contact</span>, <span class='text-[#00F0FF]'>clear</span>";
+                } else if (cmd === 'skills') {
+                    responseLine.innerHTML = "Stacks: Next.js, Python, Node.js, React, Advanced SQL, Linux, Docker, Cybersecurity.";
+                } else if (cmd === 'status') {
+                    responseLine.innerHTML = "Status: 100% Operational | Location: Lahore, PK | Node: Secure";
+                } else if (cmd === 'contact') {
+                    responseLine.innerHTML = "Redirecting... Use the WhatsApp or Cal.com links above for direct dispatch.";
+                } else if (cmd === 'clear') {
+                    terminalBody.innerHTML = "<div>Terminal reset.</div>";
+                    terminalInput.value = '';
+                    return;
+                } else if (cmd === '') {
+                    responseLine.innerHTML = "";
+                } else {
+                    responseLine.innerHTML = `Command not recognized: ${cmd}. Type "help" for options.`;
+                }
+
+                terminalBody.appendChild(responseLine);
+                terminalInput.value = '';
+                terminalBody.scrollTop = terminalBody.scrollHeight;
+            }
         });
     </script>
 </body>
