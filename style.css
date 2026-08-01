@@ -16,7 +16,6 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    /* Professional Working Atmosphere & Cyber Grid Background */
     background-image: 
         radial-gradient(circle at 50% 10%, rgba(0, 240, 255, 0.06) 0%, transparent 50%),
         radial-gradient(circle at 80% 90%, rgba(0, 255, 102, 0.04) 0%, transparent 40%),
@@ -26,13 +25,25 @@ body {
 }
 
 /* The • FR. Logo Aesthetic */
-.brand-logo {
+.brand-logo-container {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    border: 2px solid var(--cyber-cyan);
+    background: #0A0A0A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
+}
+
+.brand-logo-text {
     font-size: 2.2rem;
     font-weight: 900;
     letter-spacing: -2px;
     color: white;
-    text-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
-    margin-bottom: 5px;
+    text-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
 }
 
 .brand-dot {
