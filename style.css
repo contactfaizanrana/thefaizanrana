@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+
+body {
+    background-color: #0A0A0A;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    background-image: radial-gradient(circle at 50% 0%, #1a1a24 0%, #0A0A0A 70%);
+    margin: 0;
+    padding: 0;
+}
+
+/* Premium Glassmorphism & Hover Effects */
+.glass-panel {
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid #333;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-panel:hover {
+    border-color: #00F0FF;
+    box-shadow: 0 8px 25px rgba(0, 240, 255, 0.15);
+    transform: translateY(-4px);
+}
+
+.cert-badge {
+    background: #111;
+    border: 1px solid #222;
+    transition: border-color 0.3s ease;
+}
+
+.cert-badge:hover {
+    border-color: #00FF66;
+}
+
+/* Form Styling */
+.cyber-input {
+    width: 100%;
+    background: #0F0F0F;
+    border: 1px solid #333;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.cyber-input:focus {
+    border-color: #00F0FF;
+}
+
+.cyber-button {
+    width: 100%;
+    background: white;
+    color: black;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.cyber-button:hover {
+    background: #00F0FF;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+}
