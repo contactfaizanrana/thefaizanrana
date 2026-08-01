@@ -1,68 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
 
-body {
-    background-color: #0A0A0A;
-    color: #FFFFFF;
-    font-family: 'Inter', sans-serif;
-    background-image: radial-gradient(circle at 50% 0%, #1a1a24 0%, #0A0A0A 70%);
-    margin: 0;
-    padding: 0;
+:root {
+    --bg-color: #050505;
+    --cyber-cyan: #00F0FF;
+    --matrix-green: #00FF66;
+    --glass-bg: rgba(15, 15, 15, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.08);
 }
 
-/* Premium Glassmorphism & Hover Effects */
+body {
+    background-color: var(--bg-color);
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Animated 3D Grid Background */
+    background-image: 
+        linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-position: center center;
+}
+
+/* The • FR. Logo Aesthetic */
+.brand-logo {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    color: white;
+    text-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+    margin-bottom: 10px;
+}
+
+.brand-dot {
+    color: var(--cyber-cyan);
+}
+
+/* Premium 3D Glass Panels */
 .glass-panel {
-    background: rgba(20, 20, 20, 0.6);
-    backdrop-filter: blur(12px);
-    border: 1px solid #333;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d; /* Required for 3D elements inside */
 }
 
 .glass-panel:hover {
-    border-color: #00F0FF;
-    box-shadow: 0 8px 25px rgba(0, 240, 255, 0.15);
-    transform: translateY(-4px);
+    border-color: var(--cyber-cyan);
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.15);
+}
+
+/* 3D Pop Effect for text inside the cards */
+.glass-panel > div, .glass-panel > i {
+    transform: translateZ(30px);
+}
+
+/* The Cal.com Primary CTA Button */
+.primary-cta {
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.1), rgba(0, 255, 102, 0.1));
+    border: 1px solid var(--cyber-cyan);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+}
+
+.primary-cta:hover {
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(0, 255, 102, 0.2));
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.4);
 }
 
 .cert-badge {
-    background: #111;
+    background: rgba(10, 10, 10, 0.8);
     border: 1px solid #222;
     transition: border-color 0.3s ease;
 }
 
 .cert-badge:hover {
-    border-color: #00FF66;
-}
-
-/* Form Styling */
-.cyber-input {
-    width: 100%;
-    background: #0F0F0F;
-    border: 1px solid #333;
-    color: white;
-    padding: 12px;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.cyber-input:focus {
-    border-color: #00F0FF;
-}
-
-.cyber-button {
-    width: 100%;
-    background: white;
-    color: black;
-    font-weight: bold;
-    padding: 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-}
-
-.cyber-button:hover {
-    background: #00F0FF;
-    box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+    border-color: var(--matrix-green);
 }
